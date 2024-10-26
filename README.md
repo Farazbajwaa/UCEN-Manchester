@@ -1,2 +1,2 @@
-# UCEN-Manchester
+# UCEN-MANCHESTER
 Uni Assignments 
