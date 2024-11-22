@@ -1,1 +1,14 @@
-
+if mark >= 70:
+   print("Grade: A")
+elif mark >= 60:
+   print("Grade: B")
+elif mark >= 50:
+   print("Grade: C")
+elif mark >= 40:
+   print("Grade: D")
+elif mark >= 30:
+   print("Grade: E")
+elif mark >= 20:
+   print("Grade: F")
+else:
+   print("Invalid mark")
