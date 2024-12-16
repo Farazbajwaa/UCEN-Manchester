@@ -17,7 +17,7 @@ def calculate_product(a, b):
 def calculate_quotient(a, b):
     return a // b if b != 0 else "Undefined (division by zero)"
 def display_and_save_results(a, b, results, filename="calculations.txt"):
-    """Display results and save them to a file."""
+ ""Display results and save them to a file.""
     with open(filename, "a") as file:
         print("\nResults:")
         for operation, result in results.items():
