@@ -1,1 +1,41 @@
-
+def get_values():
+    """Get two integer inputs from the user."""
+    print("Enter two numbers:")
+    while True:
+        try:
+            a = int(input("First number: "))
+            b = int(input("Second number: "))
+            return a, b
+        except ValueError:
+            print("Invalid input! Please enter integers only.\n")
+def calculate_sum(a, b):
+    return a + b
+def calculate_difference(a, b):
+    return a - b
+def calculate_product(a, b):
+    return a * b
+def calculate_quotient(a, b):
+    return a // b if b != 0 else "Undefined (division by zero)"
+def display_and_save_results(a, b, results, filename="calculations.txt"):
+    """Display results and save them to a file."""
+    with open(filename, "a") as file:
+        print("\nResults:")
+        for operation, result in results.items():
+            output = f"The {operation} of {a} and {b} is {result}"
+            print(output)
+            file.write(output + "\n")
+    print(f"\nResults have been saved to {filename}.")
+def main():
+    # Input
+    a, b = get_values()
+    # Processing
+    results = {
+        "sum": calculate_sum(a, b),
+        "difference": calculate_difference(a, b),
+        "product": calculate_product(a, b),
+        "quotient": calculate_quotient(a, b),
+    }
+    # Output
+    display_and_save_results(a, b, results)
+if __name__ == "__main__":
+    main()
